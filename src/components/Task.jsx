@@ -33,7 +33,7 @@ export default function Task() {
         <div className="flex items-center justify-between gap-2 mb-4">
           <input
             ref={inputRef}
-            className="w-full p-1 border-b-2 rounded-sm border-stone-300 bg-stone-200 text-stone-600 focus:outline-none focus:border-stone-600"
+            className="w-full p-1 border-b-2 rounded-sm border-stone-300 bg-stone-50 text-stone-700 focus:outline-none focus:border-stone-600"
             type="text"
             onChange={(e) => setValueAddTask(e.target.value)}
             value={valueAddTask}
@@ -41,7 +41,7 @@ export default function Task() {
             onKeyDown={(e) => e.key === "Enter" && handleAddTask()}
           />
           <button
-            className={`px-4 py-2 rounded transition ${
+            className={`px-4 py-2 rounded transition text-xs md:text-base ${
               valueAddTask.trim()
                 ? "bg-blue-500 hover:bg-blue-600 text-white"
                 : "bg-gray-300 text-gray-500 cursor-not-allowed"
@@ -53,7 +53,7 @@ export default function Task() {
         </div>
 
         {selectedProject.tasks.length === 0 ? (
-          <p className="text-stone-800 mb-4">
+          <p className="text-stone-800 mb-4 text-xs md:text-xl">
             This project does not have any tasks yet
           </p>
         ) : (
@@ -61,7 +61,7 @@ export default function Task() {
             <div className="flex justify-end mb-3">
               <button
                 onClick={() => setModalDeleteAll(true)}
-                className="px-3 py-1 text-sm font-semibold rounded bg-red-500 text-white hover:bg-red-600 transition"
+                className="px-3 py-1 text-xs md:text-base font-semibold rounded bg-red-500 text-white hover:bg-red-600 transition"
               >
                 Delete All
               </button>
@@ -88,7 +88,7 @@ export default function Task() {
                     </span>
                   </div>
                   <button
-                    className="text-red-500 hover:text-red-600 transition"
+                    className="text-red-500 hover:text-red-600 transition text-xs md:text-base"
                     onClick={() => {
                       setSelectedTaskId(task.id);
                       setModalVisible(true);

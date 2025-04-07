@@ -14,10 +14,10 @@ export default function NoProjectSelected() {
         height={200}
         className="w-20 h-20 md:w-24 md:h-24 object-contain"
       />
-      <h2 className="text-lg md:text-xl font-bold text-stone-500 my-3 md:my-4">
+      <h2 className="text-[16px] md:text-xl font-bold text-stone-600 my-3 md:my-4">
         No Project Selected
       </h2>
-      <p className="text-stone-400 text-sm md:text-base mb-3 md:mb-4">
+      <p className="text-stone-400 text-sm md:text-base ">
         Please select a project or get started with a new project
       </p>
       <Button onClick={handleStartAddProject}>Get Started</Button>
